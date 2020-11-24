@@ -9,7 +9,6 @@ namespace LegoAccounting.Domain.Entities
 
 		public bool IsSticker => Number.Contains(StickerCode);
 
-
 		public ObjectId Id { get; set; }
 
 		public string Number { get; set; }
@@ -17,8 +16,6 @@ namespace LegoAccounting.Domain.Entities
 		public Color Color { get; set; }
 
 		public string Name { get; set; }
-
-		//public long CategoryId { get; set; }
 
 		public string ImageUrl => $"//img.bricklink.com/ItemImage/PN/{(int) Color}/{Number}.png";
 	}

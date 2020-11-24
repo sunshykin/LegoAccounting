@@ -63,15 +63,15 @@ namespace LegoAccounting.Web.Controllers
 			{
 				var part = parts.First(pa => pa.Id.Equals(p.PartId));
 
-				return new
+				return new CollectionItemPartViewModel
 				{
-					Id = p.Id,
+					Id = p.Id.ToString(),
 					Number = part.Number,
 					Name = System.Net.WebUtility.HtmlDecode(part.Name),
-					Image = part.ImageUrl,
-					Color = part.Color.ToString(),
+					ImageUrl = part.ImageUrl,
+					Color = part.Color,
 					Quantity = p.Quantity,
-					Condition = p.Condition.ToString()
+					Condition = p.Condition
 				};
 			});
 

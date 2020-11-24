@@ -234,7 +234,7 @@ const CollectionItemPage = (props) => {
 						<Table.Row key={part.id}>
 							<Table.Cell>
 								<Image
-									src={part.image}
+									src={part.imageUrl}
 									centered
 									size='tiny'
 								/>
