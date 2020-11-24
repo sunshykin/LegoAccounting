@@ -53,7 +53,7 @@ namespace LegoAccounting.Web.Controllers
 		}
 
 		[HttpGet("{id}/parts")]
-		public async Task<ActionResult<IEnumerable<PartOfCollectionItem>>> GetItemParts(ObjectId id)
+		public async Task<ActionResult<IEnumerable<CollectionItemPartViewModel>>> GetItemParts(ObjectId id)
 		{
 			var collectionItemParts = await partOfCollectionItemRepository.GetItemParts(id);
 			var partIds = collectionItemParts.Select(p => p.PartId).ToArray();
